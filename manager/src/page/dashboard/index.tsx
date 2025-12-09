@@ -36,7 +36,7 @@ export function Dashboard() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
 
           {/* Ganho Hoje */}
-          <div className="bg-white p-6 rounded-2xl shadow-sm border">
+          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-green-600 transition duration-300">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-green-100 text-green-600 rounded-xl">
                 <DollarSign size={22} />
@@ -50,7 +50,7 @@ export function Dashboard() {
           </div>
 
           {/* Custo Estimado */}
-          <div className="bg-white p-6 rounded-2xl shadow-sm border">
+          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-green-600 transition duration-300">
             <div className="p-3 w-12 bg-orange-100 text-orange-600 rounded-xl mb-4">
               <TrendingUp size={22} />
             </div>
@@ -59,7 +59,7 @@ export function Dashboard() {
           </div>
 
           {/* Lucro Líquido */}
-          <div className="bg-white p-6 rounded-2xl shadow-sm border">
+          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-green-600 transition duration-300">
             <div className="p-3 w-12 bg-blue-100 text-blue-600 rounded-xl mb-4">
               <DollarSign size={22} />
             </div>
@@ -68,7 +68,7 @@ export function Dashboard() {
           </div>
 
           {/* Horas Online */}
-          <div className="bg-white p-6 rounded-2xl shadow-sm border">
+          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-green-600 transition duration-300">
             <div className="p-3 w-12 bg-purple-100 text-purple-600 rounded-xl mb-4">
               <Clock size={22} />
             </div>
@@ -81,7 +81,7 @@ export function Dashboard() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
           {/* GRÁFICO */}
-          <div className="bg-white p-6 rounded-2xl shadow-sm border col-span-2">
+          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 col-span-2">
             <h2 className="text-lg font-semibold mb-4">Ganhos da Semana</h2>
 
             <ResponsiveContainer width="100%" height={300}>
@@ -102,7 +102,7 @@ export function Dashboard() {
           </div>
 
           {/* Resumo do Dia */}
-          <div className="bg-white p-6 rounded-2xl shadow-sm border">
+          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
             <h2 className="text-lg font-semibold mb-6">Resumo do Dia</h2>
 
             <div className="space-y-4 text-sm">
@@ -120,7 +120,7 @@ export function Dashboard() {
               </div>
             </div>
 
-            <button className="mt-6 w-full bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 transition">
+            <button className="mt-6 w-full bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 cursor-pointer transition">
               Adicionar Corrida
             </button>
           </div>

@@ -1,22 +1,19 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "./layout";
-import { Dashboard} from "./page/dashboard";
+import { Dashboard } from "./page/dashboard";
 
-
-
-const router = createBrowserRouter([
-
-    {   
-        element: <Layout />,
-        children: [
-            {
-                path: "/",
-                element: <Dashboard />,
-            }
-
-        ],
-    }
-
+export const router = createBrowserRouter([
+  {
+    element: <Layout />,
+    children: [
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "/", // opcional → redireciona para dashboard
+        element: <Dashboard />,
+      },
+    ],
+  },
 ]);
-
-export { router };
