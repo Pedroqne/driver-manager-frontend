@@ -7,7 +7,7 @@ export function AdicionarCorrida() {
       
       {/* Voltar */}
       <Link
-        to="/dashboard"
+        to="/corridas"
         className="flex items-center gap-2 text-green-700 mb-6 font-medium"
       >
         <ArrowLeft size={18} /> Voltar
