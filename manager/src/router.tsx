@@ -4,6 +4,8 @@ import { Dashboard } from "./page/dashboard";
 import { AdicionarCorrida } from "./page/add-race";
 import { CorridasPage } from "./page/races";
 import { MetasPage } from "./page/goals";
+import { RelatoriosPage } from "./page/reports";
+import { WrappedPage } from "./page/wrapper";
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ export const router = createBrowserRouter([
       {
         path: "/metas",
         element: <MetasPage />,
+      },
+      {
+        path: "/relatorios",
+        element: <RelatoriosPage />,
+      },
+      {
+        path: "/wrapped",
+        element: <WrappedPage />,
       }
     ],
   },
