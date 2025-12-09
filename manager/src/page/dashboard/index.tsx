@@ -1,4 +1,5 @@
 import { ArrowUpRight, Clock, DollarSign, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 import {
   LineChart,
   Line,
@@ -119,10 +120,12 @@ export function Dashboard() {
                 <span className="font-semibold">4.9/5</span>
               </div>
             </div>
-
-            <button className="mt-6 w-full bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 cursor-pointer transition">
-              Adicionar Corrida
-            </button>
+              <Link
+                to="/corridas/adicionar"
+                className="mt-6 block text-center w-full bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 cursor-pointer transition"
+              >
+                Adicionar Corrida
+              </Link>
           </div>
 
         </div>
