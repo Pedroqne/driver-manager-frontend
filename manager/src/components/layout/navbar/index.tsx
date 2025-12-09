@@ -101,7 +101,7 @@ export const Navbar = () => {
                         <span className="text-sm text-gray-700 font-medium">Max Alexandre</span>
                     </div>
 
-                    <button className="w-full py-2 text-center font-semibold text-red-600 hover:bg-red-50 cursor-pointer rounded-lg">
+                    <button className="w-full py-2 text-center font-semibold text-red-600 cursor-pointer hover:bg-red-50  rounded-lg">
                         Sair
                     </button>
                 </div>

@@ -85,7 +85,7 @@ export function WrappedPage() {
 
       {/* BOTÃO BAIXAR RESUMO */}
       <div className="px-6 flex justify-center">
-        <button className="flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-700 transition w-full md:w-auto">
+        <button className="flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-xl font-semibold cursor-pointer hover:bg-green-700 transition w-full md:w-auto">
           <Download size={18} />
           Baixar Resumo
         </button>
