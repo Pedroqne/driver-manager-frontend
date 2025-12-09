@@ -3,6 +3,7 @@ import { Layout } from "./layout";
 import { Dashboard } from "./page/dashboard";
 import { AdicionarCorrida } from "./page/add-race";
 import { CorridasPage } from "./page/races";
+import { MetasPage } from "./page/goals";
 
 export const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
       {
         path: "/corridas/adicionar",
         element: <AdicionarCorrida />,
+      },
+      {
+        path: "/metas",
+        element: <MetasPage />,
       }
     ],
   },
