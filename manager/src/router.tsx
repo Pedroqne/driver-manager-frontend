@@ -6,21 +6,49 @@ import { CorridasPage } from "./page/races";
 import { MetasPage } from "./page/goals";
 import { RelatoriosPage } from "./page/reports";
 import { WrappedPage } from "./page/wrapper";
+import { RegisterPage } from "./page/auth/register";
+import { LoginPage } from "./page/auth/login";
+import { RecoverPasswordPage } from "./page/auth/recover-password";
+import { VerifyEmailPage } from "./page/auth/verify-email";
+import { OnboardingPage } from "./page/auth/onboarding";
+
 
 export const router = createBrowserRouter([
   {
+    path: "/onboarding",
+    element: <OnboardingPage />,
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
+  {
+    path: "/register",
+    element: <RegisterPage />,
+  },
+  {
+    path: "/verify-email",
+    element: <VerifyEmailPage />,
+  },
+  {
+    path: "/recover-password",
+    element: <RecoverPasswordPage />,
+  },
+
+  
+  {
     element: <Layout />,
     children: [
+      {
+        path: "/",
+        element: <Dashboard />,
+      },
       {
         path: "/dashboard",
         element: <Dashboard />,
       },
       {
-        path: "/", 
-        element: <Dashboard />,
-      },
-      {
-        path: "/corridas", 
+        path: "/corridas",
         element: <CorridasPage />,
       },
       {
@@ -38,7 +66,7 @@ export const router = createBrowserRouter([
       {
         path: "/wrapped",
         element: <WrappedPage />,
-      }
+      },
     ],
   },
 ]);

@@ -1,0 +1,115 @@
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
+import { FaApple } from "react-icons/fa";
+
+export function LoginPage() {
+  const navigate = useNavigate();
+  const [form, setForm] = useState({ email: "", password: "" });
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  }
+
+  function handleLogin(e: React.FormEvent) {
+    e.preventDefault();
+    navigate("/dashboard");
+  }
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+      <div className="w-full max-w-md bg-white p-8 border border-gray-200 rounded-xl shadow-sm">
+
+        {/* LOGO */}
+        <div className="flex justify-center mb-4">
+          <div className="text-5xl text-black">
+           
+            <span className="font-bold">🚗</span>
+          </div>
+        </div>
+
+        <h1 className="text-2xl font-semibold text-center text-gray-900 mb-6">
+          Faça login no <span className="text-green-600">DriverPay</span>
+        </h1>
+
+        {/* FORM */}
+        <form onSubmit={handleLogin} className="space-y-5">
+          <div>
+            <label className="text-gray-700 font-medium">Email</label>
+            <input
+              type="email"
+              name="email"
+              onChange={handleChange}
+              className="mt-1 w-full px-3 py-2 border border-gray-300 bg-gray-100 rounded-md focus:border-green-600 outline-none transition"
+              required
+            />
+          </div>
+
+          <div>
+            <label className="text-gray-700 font-medium">Senha</label>
+
+            <input
+              type="password"
+              name="password"
+              onChange={handleChange}
+              className="mt-1 w-full px-3 py-2 border border-gray-300 bg-gray-100 rounded-md focus:border-green-600 outline-none transition"
+              required
+            />
+
+            <div className="text-right mt-1">
+              <Link
+                to="/recover-password"
+                className="text-blue-600 text-sm hover:underline"
+              >
+                Esqueceu sua senha?
+              </Link>
+            </div>
+          </div>
+
+          {/* BOTÃO LOGIN */}
+          <button
+            type="submit"
+            className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-md transition"
+          >
+           <Link to="/" >
+            Entrar
+          </Link>
+          </button>
+        </form>
+
+        {/* DIVISOR */}
+        <div className="flex items-center gap-4 my-6">
+          <div className="h-[1px] flex-1 bg-gray-300" />
+          <span className="text-gray-500 text-sm">ou</span>
+          <div className="h-[1px] flex-1 bg-gray-300" />
+        </div>
+
+        {/* LOGIN SOCIAL */}
+        <div className="space-y-3">
+          <button className="w-full flex items-center gap-3 justify-center border border-gray-300 bg-white py-2 rounded-md hover:bg-gray-100 transition">
+            <FcGoogle size={20} />
+            <span className="text-gray-700 font-medium">
+              Continuar com o Google
+            </span>
+          </button>
+
+          <button className="w-full flex items-center gap-3 justify-center border border-gray-300 bg-white py-2 rounded-md hover:bg-gray-100 transition">
+            <FaApple size={20} className="text-gray-800" />
+            <span className="text-gray-700 font-medium">
+              Continue com a Apple
+            </span>
+          </button>
+        </div>
+
+        {/* CADASTRO */}
+        <p className="text-center text-sm text-gray-600 mt-6">
+          É novo aqui?{" "}
+          <Link to="/register" className="text-blue-600 hover:underline">
+            Crie uma conta
+          </Link>
+        </p>
+
+      </div>
+    </div>
+  );
+}
