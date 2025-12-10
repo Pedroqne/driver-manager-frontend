@@ -44,7 +44,7 @@ export function OnboardingPage() {
       <div className="w-full flex justify-end">
         <button
           onClick={skip}
-          className="text-green-600 font-semibold text-sm hover:underline"
+          className="text-green-600 font-semibold text-sm cursor-pointer hover:underline"
         >
           Pular
         </button>
@@ -78,7 +78,7 @@ export function OnboardingPage() {
       {/* BOTÃO */}
       <button
         onClick={next}
-        className="w-full bg-green-600 text-white py-3 rounded-xl font-semibold flex items-center justify-center gap-2 mt-6 hover:bg-green-700 transition"
+        className="w-full max-w-6xl bg-green-600 text-white py-3 rounded-xl font-semibold flex items-center justify-center gap-2 mt-6 cursor-pointer hover:bg-green-700 transition"
       >
         {isLast ? "Começar" : "Próximo"} <ArrowRight size={20} />
       </button>

@@ -52,8 +52,12 @@ export const Navbar = () => {
             <div className="ml-auto hidden md:flex items-center gap-6">
                 <Moon className="w-5 h-5 text-gray-700 cursor-pointer" />
                 <span className="text-sm text-gray-700 font-medium">Max Alexandre</span>
-                <button className="text-sm font-semibold text-gray-900 hover:text-red-600">
-                Sair
+                <button 
+                type="submit"
+                className="text-sm font-semibold text-gray-900 hover:text-red-600">
+                    <Link to="/login">
+                        Sair
+                    </Link>
                 </button>
             </div>
 
@@ -101,8 +105,12 @@ export const Navbar = () => {
                         <span className="text-sm text-gray-700 font-medium">Max Alexandre</span>
                     </div>
 
-                    <button className="w-full py-2 text-center font-semibold text-red-600 cursor-pointer hover:bg-red-50  rounded-lg">
-                        Sair
+                    <button
+                        type="submit"
+                        className="w-full py-2 text-center font-semibold text-red-600 cursor-pointer hover:bg-red-50  rounded-lg">
+                        <Link to="/login">
+                            Sair
+                        </Link>
                     </button>
                 </div>
             </div>
