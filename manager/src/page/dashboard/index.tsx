@@ -11,6 +11,7 @@ import {
 } from "recharts";
 import { WeatherWidget } from "./components/WeatherWidget";
 import { UserStatus } from "./components/userStatus";
+import { ToastNotifier } from "./components/toastNotifier";
 
 const data = [
   { name: "ter.", value: 180 },
@@ -137,6 +138,7 @@ export function Dashboard() {
 
         </div>
       </div>
+      <ToastNotifier />
     </main>
   );
 }
