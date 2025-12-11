@@ -10,6 +10,7 @@ import {
   CartesianGrid
 } from "recharts";
 import { WeatherWidget } from "./components/WeatherWidget";
+import { UserStatus } from "./components/userStatus";
 
 const data = [
   { name: "ter.", value: 180 },
@@ -33,7 +34,10 @@ export function Dashboard() {
             <p className="text-gray-600 mt-1">Resumo completo do seu desempenho</p>
           </div>
 
-          <WeatherWidget />
+          <div className="flex items-center gap-4">
+            <UserStatus />
+            <WeatherWidget />
+          </div>
         </div>
 
         {/* Cards superiores */}
