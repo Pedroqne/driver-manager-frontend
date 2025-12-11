@@ -9,6 +9,7 @@ import {
   ResponsiveContainer,
   CartesianGrid
 } from "recharts";
+import { WeatherWidget } from "./components/WeatherWidget";
 
 const data = [
   { name: "ter.", value: 180 },
@@ -26,11 +27,13 @@ export function Dashboard() {
       <div className="p-6 space-y-10">
 
         {/* Título */}
-        <div>
-          <h1 className="text-3xl font-bold">Dashboard</h1>
-          <p className="text-gray-600">
-            Bem-vindo! Aqui está um resumo do seu desempenho
-          </p>
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 mb-10">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
+            <p className="text-gray-600 mt-1">Resumo completo do seu desempenho</p>
+          </div>
+
+          <WeatherWidget />
         </div>
 
         {/* Cards superiores */}
